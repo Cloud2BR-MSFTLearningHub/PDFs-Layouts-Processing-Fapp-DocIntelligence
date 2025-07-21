@@ -48,26 +48,6 @@ variable "key_vault_name" {
   description = "The name of the Key Vault"
   type        = string
 }
-
-variable "ai_vision_name" {
-  description = "The name of the AI Vision Cognitive Services account"
-  type        = string
-}
-
-variable "ai_vision_sku" {
-  description = "The SKU of the AI Vision Cognitive Services account"
-  type        = string
-  default     = "S0"
-}
-
-variable "ai_vision_tags" {
-  description = "Tags to be applied to the AI Vision resource"
-  type        = map(string)
-  default     = {
-    Environment = "Development"
-    Service     = "AI Vision"
-  }
-}
 variable "cosmosdb_account_name" {
   description = "The name of the CosmosDB account."
   type        = string
