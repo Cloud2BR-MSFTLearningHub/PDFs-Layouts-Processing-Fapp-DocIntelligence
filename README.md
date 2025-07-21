@@ -1,4 +1,4 @@
-# Demo: PDF Layout Extraction with Doc Intelligence (full-code approach)
+# Demo: PDF Layout Extraction with Doc Intelligence <br/> Supporting Multiple Document Versions with Visual Selection Cues (full-code approach)
 
 `Azure Storage + Document Intelligence + Function App +  Cosmos DB`
 
@@ -10,7 +10,15 @@ Costa Rica
 
 Last updated: 2025-07-16
 
-----------
+-----------------------------
+
+
+> This solution is designed to be flexible and robust, supporting multiple versions of PDF documents with varying layouts—including those that use visual selection cues such as gray fills, hand-drawn Xs, checkmarks, or circles. By building on the [PDFs-Layouts-Processing-Fapp-DocIntelligence](https://github.com/MicrosoftCloudEssentials-LearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence) repository, we ensure that:
+
+- Table structure and text are extracted using Azure Document Intelligence (Layout model).
+- Visual selection cues are detected using Azure AI Vision or image preprocessing.
+- Visual indicators are mapped to structured data, returning only the selected values in a clean JSON format.
+- The logic is abstracted to support multiple layout variations, so the system adapts easily to new document formats and selection styles.
 
 > [!IMPORTANT]
 > This example is based on a `public network site and is intended for demonstration purposes only`. It showcases how several Azure resources can work together to achieve the desired result. Consider the section below about [Important Considerations for Production Environment](#important-considerations-for-production-environment). Please note that `these demos are intended as a guide and are based on my personal experiences. For official guidance, support, or more detailed information, please refer to Microsoft's official documentation or contact Microsoft directly`: [Microsoft Sales and Support](https://support.microsoft.com/contactus?ContactUsExperienceEntryPointAssetId=S.HP.SMC-HOME)
