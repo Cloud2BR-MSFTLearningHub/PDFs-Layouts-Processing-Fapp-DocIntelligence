@@ -289,7 +289,6 @@ resource "azurerm_role_assignment" "contributor" {
   ]
 }
 
-
 # Azure Form Recognizer (Document Intelligence)
 resource "azurerm_cognitive_account" "form_recognizer" {
   name                = var.form_recognizer_name
@@ -300,24 +299,9 @@ resource "azurerm_cognitive_account" "form_recognizer" {
 
   depends_on = [azurerm_resource_group.rg]
 
+  # Output the Form Recognizer name
   provisioner "local-exec" {
     command = "echo Form Recognizer: ${self.name}"
-  }
-}
-
-# Azure AI Vision (Cognitive Services)
-resource "azurerm_cognitive_account" "ai_vision" {
-  name                = var.ai_vision_name
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  kind                = "CognitiveServices"
-  sku_name            = var.ai_vision_sku
-  tags                = var.ai_vision_tags
-
-  depends_on = [azurerm_resource_group.rg]
-
-  provisioner "local-exec" {
-    command = "echo AI Vision: ${self.name}"
   }
 }
 
@@ -389,10 +373,6 @@ resource "azurerm_linux_function_app" "function_app" {
 
     "APPINSIGHTS_INSTRUMENTATIONKEY"        = azurerm_application_insights.appinsights.instrumentation_key
     "APPLICATIONINSIGHTS_CONNECTION_STRING" = azurerm_application_insights.appinsights.connection_string
-
-    # Azure AI Vision settings
-    "VISION_API_ENDPOINT" = azurerm_cognitive_account.ai_vision.endpoint
-    "VISION_API_KEY"      = azurerm_cognitive_account.ai_vision.primary_access_key
   }
 
   depends_on = [
