@@ -8,7 +8,7 @@ Costa Rica
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 [brown9804](https://github.com/brown9804)
 
-Last updated: 2025-08-07
+Last updated: 2025-09-17
 
 ----------
 
@@ -17,7 +17,6 @@ Last updated: 2025-08-07
 
 <details>
 <summary><b>List of References</b> (Click to expand)</summary>
-
 
 - [Power Apps pricing](https://www.microsoft.com/en-us/power-platform/products/power-apps/)
 - [Create a Fabric data agent (preview)](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent) `enables users to interact with data stored in lakehouses, warehouses, Power BI semantic models, and KQL databases using natural language queries`. Key prerequisites include having a paid Fabric capacity, enabling specific tenant settings, and ensuring data sources are accessible.
